@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="searchbox">
+          <input
+            type="text"
+            id="location"
+            placeholder="Enter Your location, pincode"
+            class="input-box"
+            value="srinagar"
+          />
+
+          <button class="fas fa-search" id="searchBtn"></button>
+        </div>
+      </div>
+
+      <div class="location-not-found">
+        <h1>sorry, location not found!!</h1>
+        <img src="images/404.png" alt="404 Error" id="404-img" />
+
+      </div>
+      <div class="weather-body">
+        <img src="/images/cloud.png" alt="Weather Image" class="weather-img">
+        <div class="weather-box">
+          <p class="temperature">0 <sup>°C </sup></p>
+          <p class="description">light rain</p>
+          <div class="weather-details">
+            <div class="humidity">
+              <i class="fas fa-droplet"></i>
+              <div class="text">
+                <span id="Humidity">70%</span>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div class="wind">
+              <i class="fa-solid fa-wind"></i>
+              <div class="text">
+                <span id="Wind-speed">70km/hr</span>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+
+            <div class="unit-toggle">
+              <label for="unit-toggle">Convert: </label>
+              <select id="unit-toggle">
+                <option value="metric">Celsius</option>
+                <option value="imperial">Fahrenheit</option>
+              </select>
+            </div>
+            <div id="weather-data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
