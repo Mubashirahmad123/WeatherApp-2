@@ -45,25 +45,38 @@ async function checkWeather(city) {
     // Updated switch statement for weather images
     switch (weather_data.weather[0].main) {
       case 'Clouds':
-        weather_img.src = "/WeatherApp-2/images/colud.png";
+        weather_img.src = "/images/cloud.png";
         break;
       case 'Clear':
-        weather_img.src = "/WeatherApp-2/images/clear.png";
+        weather_img.src = "/images/clear.png";
         break;
       case 'Rain':
-        weather_img.src = "/WeatherApp-2/images/rain.png";
+        weather_img.src = "/images/rain.png";
         break;
       case 'Haze':
-        weather_img.src = "/WeatherApp-2/images/haze.png";
+        weather_img.src = "/images/haze.png";
         break;
       case 'Snow':
-        weather_img.src = "/WeatherApp-2/images/snow.png";
+        weather_img.src = "/images/snow.png";
+        break;
+      case 'Fog':
+        weather_img.src = "/images/fog.png";
+        break;
+      case 'Thunderstorm':
+        weather_img.src = "/images/Thunderstorm.png";
+        break;
+      case 'Tornado':
+        weather_img.src = "/images/tornado.png";
+        break;
+      case 'Windy':
+        weather_img.src = "/images/windy.png"; // Update with the correct path
         break;
       default:
-        weather_img.src = "/WeatherApp-2/images/404.png"; 
+        weather_img.src = "/images/404.png";
         break;
     }
-
+    
+   
     weatherData.innerHTML = `
       <p>Temperature: ${Math.round(weather_data.main.temp)}°${unit === 'metric' ? 'C' : 'F'}</p>
       <p>Humidity: ${weather_data.main.humidity}%</p>
